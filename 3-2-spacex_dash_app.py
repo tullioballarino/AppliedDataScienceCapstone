@@ -79,7 +79,8 @@ def get_pie_chart(entered_site):
         fig = px.pie(
             data_frame=filtered_df,
             names = 'Result',
-            color_discrete_sequence=px.colors.qualitative.Light24,
+            color='Result',
+            color_discrete_map={'Failure':'red', 'Success':'green'},
             title= 'Launch results from site ' + entered_site
         )
         return fig
